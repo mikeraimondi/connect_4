@@ -1,0 +1,20 @@
+- Enter players
+  - Both players must specify name
+  - Names must be unique
+  - Return hash of players
+- Initialize 2D array of board positions
+  - 6 rows by 7 columns 
+- Define piece class
+  - Has player member
+- Define piece behavior
+  - Piece can be placed on y axis (7 possible positions)
+    - If position is invalid, inform and retry
+    - If the selected column has 6 pieces, move is invalid
+  - If position below piece is empty, move piece down one position
+    - Repeat until y = 0 
+  - If piece is in a row of 4 of the same player, trigger victory condition
+    - Print victory message and ask if they want to play again
+      - If yes, re-initialize game board and start again
+      - If no, exit
+  - Else, it becomes other player's turn
+  - If board is full inform of stalemate, re-initialize and start again
